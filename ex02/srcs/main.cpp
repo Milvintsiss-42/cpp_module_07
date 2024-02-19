@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 17:36:12 by ple-stra          #+#    #+#             */
-/*   Updated: 2024/02/17 20:14:05 by ple-stra         ###   ########.fr       */
+/*   Updated: 2024/02/19 13:35:05 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,40 @@ int	main(void)
 	copy_double_array[3] = 6.42;
 	print_double_array(five_double_array);
 	print_double_array(copy_double_array);
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+	try
+	{
+		std::cout << "Accessing element at position 0." << std::endl;
+		int_array[0];
+	}
+	catch (Array<double>::OutOfBoundsException &e)
+	{
+		std::cout << "This will not be thrown." << std::endl;
+	}
+	catch (Array<int>::OutOfBoundsException &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	try
+	{
+		std::cout << "Accessing element at position -42." << std::endl;
+		int_array[-42]; // Cast as unsigned_max - 42
+	}
+	catch (Array<int>::OutOfBoundsException &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	try
+	{
+		std::cout << "Accessing element at position 42." << std::endl;
+		int_array[42];
+	}
+	catch (Array<int>::OutOfBoundsException &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
 	return (0);
 }
