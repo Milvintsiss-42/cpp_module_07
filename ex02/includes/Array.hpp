@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 18:10:43 by ple-stra          #+#    #+#             */
-/*   Updated: 2024/02/17 20:13:44 by ple-stra         ###   ########.fr       */
+/*   Updated: 2024/02/19 13:32:01 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ public:
 	unsigned int size() const;
 
 	Array<T> &operator=(Array<T> const &rhs);
-	T &operator[](unsigned int n);
-	T operator[](unsigned int n) const;
+	T &operator[](unsigned int n) const;
 
 	class OutOfBoundsException : public std::exception {
 	public:

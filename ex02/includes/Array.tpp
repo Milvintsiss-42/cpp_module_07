@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 18:24:36 by ple-stra          #+#    #+#             */
-/*   Updated: 2024/02/17 20:07:57 by ple-stra         ###   ########.fr       */
+/*   Updated: 2024/02/19 13:32:12 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,15 +56,7 @@ Array<T> &Array<T>::operator=(Array<T> const &rhs)
 }
 
 template <typename T>
-T &Array<T>::operator[](unsigned int n)
-{
-	if (n >= this->size())
-		throw OutOfBoundsException();
-	return this->_elements[n];
-}
-
-template <typename T>
-T Array<T>::operator[](unsigned int n) const
+T &Array<T>::operator[](unsigned int n) const
 {
 	if (n >= this->size())
 		throw OutOfBoundsException();
