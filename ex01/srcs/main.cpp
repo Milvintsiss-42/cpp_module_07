@@ -6,14 +6,14 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 17:36:12 by ple-stra          #+#    #+#             */
-/*   Updated: 2024/02/17 18:04:32 by ple-stra         ###   ########.fr       */
+/*   Updated: 2024/02/20 15:54:38 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
 #include <iostream>
 
-static void print_int(int &i)
+static void print_int(const int i)
 {
 	std::cout << i << std::endl;
 }
@@ -23,7 +23,7 @@ static void multiply_int_by_2(int &i)
 	i = i * 2;
 }
 
-static void print_double(double &d)
+static void print_double(const double d)
 {
 	std::cout << d << std::endl;
 }
